@@ -19,8 +19,8 @@ class FigmaDesigndoc
     @figmaformat = site.config["figmaconfig"]["format"]
     @figmaurl = site.config["figmaconfig"]["figmaurls"]
 
-    @assetpath = "designdoc/assets"
-    @pagespath = "designdoc/pages"
+    @assetpath = "site/assets"
+    @pagespath = "site/pages"
 
     @structure = {}
     site.config["figmaconfig"]["updated"] ||= {}

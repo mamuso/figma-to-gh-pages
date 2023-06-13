@@ -8,7 +8,7 @@ figmaconfig:
   token: xxxx-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   scale: 2
   format: png
-  figmaurls: true
+  figmaurls: false
   home: false
   documents:
     - document: kY1yaGDw5nA6d5whK7NvjC
@@ -17,7 +17,7 @@ figmaconfig:
 ## Jekyll configuration
 # -----------------------------------------------------------
 
-title: Figma Designdoc
+title: Figma to pages
 description: >- # this means to ignore newlines until "baseurl:"
   A repository to show how you can build a website using figma and actions.
 baseurl: '' # the subpath of your site, e.g. /blog
