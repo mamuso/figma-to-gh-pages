@@ -1,0 +1,23 @@
+<nav id="nav" role="navigation">
+  <div class="logo">
+    <a href="{{ "/" | relative_url }}"><img src="{{ "/assets/images/logo.svg" | relative_url }}"></a>
+  </div>
+
+  <% @structure.each do |category| %>
+    <span class='title'><%= category[0] %></span>
+    <ul>
+    <% category[1].each do |item| %>
+      <li class='<%= item['filename'] %> {% if page.id == '<%= item['filename'] %>' %} active{% endif%}'>
+        <a href="{{site.baseurl}}/<%= @pagespath %>/<%= item['filename'] %>">
+          <%= item['title'] %>
+          <% if !item['tag'].blank? %>
+            <span class='tag <%= item['tag'].downcase.sub(" ", "") %>'>
+              <%= item['tag'] %>
+            </span>
+          <% end %>
+        </a>
+      </li>
+    <% end %>
+    </ul>
+  <% end %>
+</nav>

@@ -1,0 +1,14 @@
+---
+layout: page
+title: <%= pagetitle %>
+id: <%= filename %>
+<% if @figmaurl %>figmaurl: https://www.figma.com/file/<%= figmadoc %>?node-id=<%= pageid %><% end %>
+<%= "summary: #{summary}" if !summary.blank? %>
+<%= "tags: #{tags}" if !tags.blank? %>
+---
+<% blocks.each do |block| %>
+<%= "## #{block['title']}" if !block['title'].blank? %>
+<%= "<img src='{{site.baseurl}}#{block['image']}' srcset='{{site.baseurl}}#{block['image']} {{site.figmaconfig.scale}}x' width='#{block['width']}' alt='#{block['title']}' #{"data-figmaurl='https://www.figma.com/file/#{figmadoc}?node-id=#{block['figmaid']}'" if @figmaurl}/>" %>
+
+<%= block['text'] %>
+<% end %>
