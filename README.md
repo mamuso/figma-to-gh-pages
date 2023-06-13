@@ -1,4 +1,4 @@
-# figma-designdoc 🐱‍👤🐱‍🐉
+# figma-to-pages
 
 Export a simple website using a bunch of conventions and one or many Figma documents as the structure. We called this "design doc" because initially, we used it to export a design guideline, but we have been using it for many other things.
 
@@ -27,7 +27,7 @@ git clone https://github.com/mamuso/figma-designdoc.git
 FIGMATOKEN=xxxx-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
-5. If you would like to keep it in the repository and you don't mind exposing your token you could add it to `_.config.yml` as well.
+5. If you would like to keep it in the repository and you don't mind exposing your token you could add it to `_config.yml` as well.
 
 6. As a next step you need to add your document id to the `document` section. For getting the ID you have to go to FIGMA. Select a document. You are now redirect to the editor.
    The url should look similar to this: `https://www.figma.com/file/LS5LEaS634ZITxOpSpDBXEeG/` Copy ID that you see after the `/file/` part and place it documents like this:
@@ -48,12 +48,16 @@ figmaconfig:
     - document: LS5LEaS634ZITxOpSpDBXEeG
       category: Components
 ```
+
 7. Installing dependencies
-```sh 
+
+```sh
 bundle install
 ```
+
 8. Running a temporary server or creating a build.
-```sh 
+
+```sh
 bundle exec jekyll serve
 ```
 
@@ -68,10 +72,13 @@ The project uses [Jekyll](https://jekyllrb.com/) and the [Figma Web API](https:/
 We use custom plugins and `Jekyll::Hooks`, so we **can't** make it work as a Github Pages branch, but you can generate the site locally or with a CI system and push the result to your repository.
 
 ## Known issues
+
 - When you have `xz` installed `nokogiri` might fail to install. Solution:
+
 ```sh
 brew unlink xy
 bundle install
 brew link xy
 ```
+
 - When you run the project it might take a while to download all the assets please be patient.
