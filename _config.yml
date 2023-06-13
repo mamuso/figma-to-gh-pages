@@ -9,7 +9,7 @@ figmaconfig:
   scale: 2
   format: png
   figmaurls: true
-  home: true
+  home: false
   documents:
     - document: kY1yaGDw5nA6d5whK7NvjC
 
