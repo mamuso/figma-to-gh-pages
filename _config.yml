@@ -38,3 +38,7 @@ exclude:
   - vendor/ruby/
 
 livereload: true
+
+sass:
+  sass_dir: _sass
+  style: compressed
