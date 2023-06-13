@@ -3,7 +3,7 @@ layout: page
 title: <%= pagetitle %>
 id: <%= filename %>
 <% if @figmaurl %>figmaurl: https://www.figma.com/file/<%= figmadoc %>?node-id=<%= pageid %><% end %>
-<%= "summary: #{summary}" if !summary.blank? %>
+<%= "summary: \'#{summary}\'" if !summary.blank? %>
 <%= "tags: #{tags}" if !tags.blank? %>
 ---
 <% blocks.each do |block| %>
